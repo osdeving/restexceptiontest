@@ -14,7 +14,7 @@ import com.willams.restexceptiontest.exceptions.dto.ModelErrorDTO;
 @RestControllerAdvice
 public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 	@ExceptionHandler(SomeCustomClassException.class)
-	protected ResponseEntity<Object> hjandleSomeCustomException(final Exception ex) {
+	protected ResponseEntity<Object> handleSomeCustomException(final Exception ex) {
 		return new ResponseEntity<>(ModelErrorDTO.badRequest(), HttpStatus.BAD_REQUEST);
 	}
 	
